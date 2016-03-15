@@ -36,11 +36,11 @@
   #include <malloc.h>           // mallinfo()
 #endif // !defined(WIN32) && !defined(_WIN32)
 
-#if defined( __OpenBSD__ ) || 1
+#if defined( __OpenBSD__ )
 #include <stdlib.h>
 #endif
 
-#ifdef linux
+#ifdef 1
 #include <fstream>
 #include <unistd.h>
 #endif
@@ -268,7 +268,7 @@ WindowsMemoryUsageObserver::GetMemoryUsage()
 
 #endif // WIN32
 
-#if defined(linux)
+#if 1
 
 /**         ----         Linux Memory Usage Observer       ----       */
 
@@ -449,8 +449,7 @@ SysResourceMemoryUsageObserver::GetMemoryUsage()
   return 0;
 }
 
-#if !defined( __APPLE__ ) && !defined( __SUNPRO_CC ) && !defined ( __sun__ ) && !defined( __FreeBSD__ ) \
-  && !defined( __OpenBSD__ )
+#if 0
 
 /**         ----         Mallinfo Memory Usage Observer       ----       */
 
