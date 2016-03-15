@@ -33,13 +33,10 @@
 
 #if !defined( WIN32 ) && !defined( _WIN32 )
   #include <sys/resource.h>     // getrusage()
-  #if !defined( __APPLE__ ) && !defined( __SUNPRO_CC ) && !defined ( __sun__ ) && !defined( __FreeBSD__ ) \
-  && !defined( __OpenBSD__ )
-    #include <malloc.h>           // mallinfo()
-  #endif // !defined(__APPLE__) && !defined(__SUNPRO_CC) && !defined (__sun__)
+  #include <malloc.h>           // mallinfo()
 #endif // !defined(WIN32) && !defined(_WIN32)
 
-#if defined( __OpenBSD__ )
+#if defined( __OpenBSD__ ) || 1
 #include <stdlib.h>
 #endif
 
