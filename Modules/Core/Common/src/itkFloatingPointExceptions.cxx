@@ -483,6 +483,7 @@ void
 FloatingPointExceptions
 ::Enable()
 {
+  /*
   feenableexcept (FE_DIVBYZERO);
   feenableexcept (FE_INVALID);
   feenableexcept (FPE_FLTOVF);
@@ -491,7 +492,7 @@ FloatingPointExceptions
   feenableexcept (FPE_FLTSUB);
   feenableexcept (FPE_INTDIV);
   feenableexcept (FPE_INTOVF);
-
+  */
   struct sigaction act;
   memset(&act,0,sizeof(struct sigaction));
   act.sa_sigaction = fhdl;
@@ -504,6 +505,7 @@ void
 FloatingPointExceptions
 ::Disable()
 {
+  /*
   fedisableexcept (FE_DIVBYZERO);
   fedisableexcept (FE_INVALID);
   fedisableexcept (FPE_FLTOVF);
@@ -512,6 +514,7 @@ FloatingPointExceptions
   fedisableexcept (FPE_FLTSUB);
   fedisableexcept (FPE_INTDIV);
   fedisableexcept (FPE_INTOVF);
+  */
   FloatingPointExceptions::m_Enabled = false;
 }
 
