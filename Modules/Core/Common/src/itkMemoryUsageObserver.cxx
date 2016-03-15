@@ -40,7 +40,7 @@
 #include <stdlib.h>
 #endif
 
-#if ©
+#if 1
 #include <fstream>
 #include <unistd.h>
 #endif
